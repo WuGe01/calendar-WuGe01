@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .puzzle_big{
+            display: grid;
+            width: 80vmin;
+            height: 40vmin;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+        }
+        .puzzle_big .puzzle {
+            background-color: aqua;
+            animation: filp 4s ease-in-out infinite;
+
+        }
+        .puzzle_big .puzzle:nth-child(1) {
+                        animation-delay: 0s;
+            }
+        .puzzle_big .puzzle:nth-child(2) {
+                        animation-delay: 0.5s;
+            }
+        .puzzle_big .puzzle:nth-child(3) {
+                        animation-delay: 1s;
+            }
+        .puzzle_big .puzzle:nth-child(4) {
+                        animation-delay: 1.5s;
+            }
+        .puzzle_big .puzzle:nth-child(5) {
+                        animation-delay: 2s;
+            }
+        .puzzle_big .puzzle:nth-child(6) {
+                        animation-delay: 2.5s;
+            }
+        .puzzle_big .puzzle:nth-child(7) {
+                        animation-delay: 3s;
+            }
+        .puzzle_big .puzzle:nth-child(8) {
+                        animation-delay: 3.5s;
+            }
+
+
+        body{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: grid;
+            place-items: center;
+        }
+        @keyframes filp {
+                    0%, 40% {;
+                            transform: rotateY(0);
+                    }
+                    80%, 100% {
+                            transform: rotateY(1turn);
+                    }
+                }
+    </style>
+</head>
+<body>
+    <div class="puzzle_big">
+        <div class="puzzle"></div>
+        <div class="puzzle"></div>
+        <div class="puzzle"></div>
+        <div class="puzzle"></div>
+        <div class="puzzle"></div>
+        <div class="puzzle"></div>
+        <div class="puzzle"></div>
+        <div class="puzzle"></div>
+    </div>
+</body>
+</html>
