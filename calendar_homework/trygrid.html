@@ -13,8 +13,11 @@
             grid-template-rows: repeat(2, 1fr);
             background: url("img/狗狗-01.jpg");
             animation: filp2 20s ease infinite;
+            box-shadow: 1px 2px 3px 1px #050505;
+            
 
         }
+       
         .puzzle{
             animation: filp3 20s ease infinite;
             animation: filp 20s ease infinite;
@@ -61,12 +64,17 @@
                         background-position-x:-300px;
                         background-position-y:-100px;
             }
-
+        h3,h5{
+            margin: 5px;
+            color: slategrey;
+        }
 
         body{
     
             display: grid;
             place-items: center;
+            background-color: #d3d3d38f;
+
         }
         @keyframes filp {
             0%,50%,100%{
@@ -98,7 +106,7 @@
     </style>
 </head>
 <body>
-    <h4>圖片切換</h4>
+    <h3>狗狗也要戴口罩</h3>
     <h5>來源:https://photo-ac.com/tw/</h5>
     <div class="puzzle_big">
         <div class="puzzle"></div>
