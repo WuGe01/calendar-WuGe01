@@ -7,41 +7,59 @@
     <style>
         .puzzle_big{
             display: grid;
-            width: 800px;
-            height: 400px;
+            width: 400px;
+            height: 200px;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
             background: url("img/狗狗-01.jpg");
+            animation: filp2 20s ease infinite;
 
         }
         .puzzle{
-            background-color: aqua;
-            animation: filp 4s ease 1;
+            animation: filp3 20s ease infinite;
+            animation: filp 20s ease infinite;
+            background: url("img/狗狗-02.jpg");
 
         }
         .puzzle_big .puzzle:nth-child(1) {
                         animation-delay: 0s;
+                        background-position-x:0;
+                        background-position-y:0;
             }
         .puzzle_big .puzzle:nth-child(2) {
-                        animation-delay: 0.25s;
+                        animation-delay: 0.1s;
+                        background-position-x:-100px;
+                        background-position-y:0;
             }
         .puzzle_big .puzzle:nth-child(3) {
-                        animation-delay: 0.5s;
+                        animation-delay: 0.2s;
+                        background-position-x:-200px;
+                        background-position-y:0;
             }
         .puzzle_big .puzzle:nth-child(4) {
-                        animation-delay: 0.75s;
+                        animation-delay: 0.3s;
+                        background-position-x:-300px;
+                        background-position-y:0;
             }
         .puzzle_big .puzzle:nth-child(5) {
-                        animation-delay: 1s;
+                        animation-delay: 0.4s;
+                        background-position-x:0;
+                        background-position-y:-100px;
             }
         .puzzle_big .puzzle:nth-child(6) {
-                        animation-delay: 1.25s;
+                        animation-delay: 0.5s;
+                        background-position-x:-100px;
+                        background-position-y:-100px;
             }
         .puzzle_big .puzzle:nth-child(7) {
-                        animation-delay: 1.5s;
+                        animation-delay: 0.6s;
+                        background-position-x:-200px;
+                        background-position-y:-100px;
             }
         .puzzle_big .puzzle:nth-child(8) {
-                        animation-delay: 1.75s;
+                        animation-delay: 0.7s;
+                        background-position-x:-300px;
+                        background-position-y:-100px;
             }
 
 
@@ -51,13 +69,31 @@
             place-items: center;
         }
         @keyframes filp {
-
-            20%,80% {
-                    transform: rotateY(90deg);
-            }
-            95% {
+            0%,50%,100%{
                     transform: rotateY(0deg);
             }
+            5%,45%,55%,95% {
+                    transform: rotateY(90deg);
+            }
+           
+        }
+        @keyframes filp2 {
+            55%,95%{
+                background: url("img/狗狗-02.jpg");
+            }
+            5%,45%{
+                background: url("img/狗狗-01.jpg");
+            }
+            
+        }
+        @keyframes filp3 {
+            55%,100%{
+                background: url("img/狗狗-01.jpg");
+            }
+            0%,45%{
+                background: url("img/狗狗-02.jpg");
+            }
+            
         }
     </style>
 </head>
