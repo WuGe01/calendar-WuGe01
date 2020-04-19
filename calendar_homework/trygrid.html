@@ -64,17 +64,50 @@
                         background-position-x:-300px;
                         background-position-y:-100px;
             }
-        h3,h5{
-            margin: 5px;
-            color: slategrey;
-        }
-
+        
         body{
     
             display: grid;
             place-items: center;
             background-color: #d3d3d38f;
 
+        }
+        h3 {
+            font-family: "Microsoft JhengHei",Arial, Helvetica, sans-serif;
+            margin: 40px 5px;
+            color: slategrey;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 5px;
+            cursor: pointer;
+            padding: 5px 80px;
+            
+        }
+        h3:after, h3:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: 1.5px solid grey;
+            transition: transform 0.2s;
+        }
+        h3:after {
+            transform: translate(3px, 3px);
+        }
+        h3:before {
+            transform: translate(-3px, -3px);
+        }
+        h3:hover:before {
+            transform: translate(0) scale(1, 1.8);
+        }
+        h3:hover:after{
+            transform: translate(0) scale(0.8, 2);
+        }
+        h3:hover{
+            color:transparent;
         }
         @keyframes filp {
             0%,50%,100%{
@@ -107,7 +140,7 @@
 </head>
 <body>
     <h3>狗狗也要戴口罩</h3>
-    <h5>來源:https://photo-ac.com/tw/</h5>
+    <!-- <h5>來源:https://photo-ac.com/tw/</h5> -->
     <div class="puzzle_big">
         <div class="puzzle"></div>
         <div class="puzzle"></div>
