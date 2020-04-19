@@ -11,7 +11,7 @@
             height: 200px;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            background: url("img/狗狗-01.jpg");
+            background: url("https://i.imgur.com/T1R9xki.jpg");
             animation: filp2 20s ease infinite;
             box-shadow: 1px 2px 3px 1px #050505;
             
@@ -21,7 +21,7 @@
         .puzzle{
             animation: filp3 20s ease infinite;
             animation: filp 20s ease infinite;
-            background: url("img/狗狗-02.jpg");
+            background: url("https://i.imgur.com/ADAqqAd.jpg");
 
         }
         .puzzle_big .puzzle:nth-child(1) {
@@ -66,24 +66,25 @@
             }
         
         body{
-    
+            font-family: "Microsoft JhengHei",Arial, Helvetica, sans-serif;
             display: grid;
             place-items: center;
             background-color: #d3d3d38f;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: slategrey;
+            text-transform: uppercase;
+
 
         }
         h3 {
-            font-family: "Microsoft JhengHei",Arial, Helvetica, sans-serif;
-            margin: 40px 5px;
-            color: slategrey;
+            margin: 180px 5px 40px;
             position: relative;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 5px;
             cursor: pointer;
             padding: 5px 80px;
             
         }
+        
         h3:after, h3:before {
             content: "";
             position: absolute;
@@ -105,9 +106,70 @@
         }
         h3:hover:after{
             transform: translate(0) scale(0.8, 2);
+        }    
+        h3:hover div.eye{
+            display: inline-block;
         }
-        h3:hover{
-            color:transparent;
+        .eye{
+            display: none;
+            width: 30px;
+            height: 10px;
+            background-color: grey;
+            border: 1.5px solid grey;
+            transform: translate(0px, -50px);
+        }
+        .pan2{
+            display: none;
+        }
+        h3:hover .pan1{
+            display: none;
+        }
+        h3:hover .pan2{
+            display: inline;
+        }
+        button{
+            text-transform: uppercase;
+            background: none;
+            color: slategrey;
+            border: 2px solid grey;
+            font: inherit;
+            line-height: 1;
+            margin: 40px 40px;
+            padding: 20px 40px;
+        }
+        .yes{
+            display: inline-block;
+            box-shadow: inset 0px 0px 0px 0px grey,
+                        1px 1px 1px 1px #050505;
+        }
+        .yes:hover{
+            box-shadow: inset 0px 0px 40px 40px grey;
+            animation: yes 1s;
+        }
+        .no{
+            display: inline-block;
+            box-shadow: inset 0px 0px 0px 0px grey,
+                        1px 1px 1px 1px #050505;
+        }
+        .no:hover{
+            box-shadow:  0px 0px 0px 20px grey;
+            animation: no 1s;
+        }
+        @keyframes yes {
+            0%{
+                box-shadow: inset 0px 0px 0px 0px grey;
+            }
+            100% {
+                box-shadow: inset 0px 0px 40px 40px grey;
+            }
+        }
+        @keyframes no {
+            0%{
+                box-shadow:  0px 0px 0px 0px grey;
+            }
+            100% {
+                box-shadow:  0px 0px 0px 20px grey;
+            }
         }
         @keyframes filp {
             0%,50%,100%{
@@ -120,27 +182,30 @@
         }
         @keyframes filp2 {
             55%,95%{
-                background: url("img/狗狗-02.jpg");
+                background: url("https://i.imgur.com/ADAqqAd.jpg");
             }
             5%,45%{
-                background: url("img/狗狗-01.jpg");
+                background: url("https://i.imgur.com/T1R9xki.jpg");
             }
             
         }
         @keyframes filp3 {
             55%,100%{
-                background: url("img/狗狗-01.jpg");
+                background: url("https://i.imgur.com/T1R9xki.jpg");
             }
             0%,45%{
-                background: url("img/狗狗-02.jpg");
+                background: url("https://i.imgur.com/ADAqqAd.jpg");
             }
             
         }
     </style>
 </head>
 <body>
-    <h3>狗狗也要戴口罩</h3>
-    <!-- <h5>來源:https://photo-ac.com/tw/</h5> -->
+    <h3><div class="eye"></div>
+        <span class="pan1">Dog need mask</span>
+        <span class="pan2">You too</span>
+        <div class="eye"></div></h3>
+    <!-- 圖片來源:https://photo-ac.com/tw/ -->
     <div class="puzzle_big">
         <div class="puzzle"></div>
         <div class="puzzle"></div>
@@ -150,6 +215,10 @@
         <div class="puzzle"></div>
         <div class="puzzle"></div>
         <div class="puzzle"></div>
+    </div>
+    <div>
+        <button class="yes">yes</button>
+        <button class="no">no</button>
     </div>
 </body>
 </html>
