@@ -25,7 +25,10 @@
 date_default_timezone_set("Asia/Taipei");
 
 if(isset($_GET['Ym'])){
-    $month=03;
+    for($d=0;$d<1;$d++){
+        $month=date("m");
+    }
+    
     $year=date("Y");
 }else{
     $year=date("Y");
