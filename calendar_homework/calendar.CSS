@@ -1,0 +1,38 @@
+.calender{
+    text-align: center;
+    /* margin: 10vh auto; */
+    font-family: 'Microsoft JhengHei',Arial, Helvetica, sans-serif;
+}
+table,td{
+    border:1px solid #ccc;
+    }
+.hd{
+    color: hotpink;
+ 
+}
+
+.container{
+    margin: 10vh auto;
+    width: 100vw;
+    height: 80vh;
+}
+table{
+    width: 100%;
+    height: 100%;
+}
+td,th,tr{
+    height: 10vh;
+    width: 10vw;
+}
+thead{
+    width: 100%;
+    height: 35%;
+}
+tbody{
+    width: 100%;
+    height: 65%;
+}
+.push_all{
+    width: 100%;
+    height: 100%;
+}
