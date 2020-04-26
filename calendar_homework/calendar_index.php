@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>萬年曆</title>
+    <link rel="stylesheet" href="../plugins/bootstrap.css">
     <style>
         .calender{
             text-align: center;
@@ -24,15 +25,13 @@
 <?php
 date_default_timezone_set("Asia/Taipei");
 
-if(isset($_GET['Ym'])){
-    for($d=0;$d<1;$d++){
-        $month=date("m");
-    }
-    
+if(isset($_GET['Mth'])){
+    $month=$_GET["Mth"];
+    echo "001";
     $year=date("Y");
 }else{
-    $year=date("Y");
-    $month=date("m");   
+    $month=date("m");
+    $year=date("Y");  
 }
 $time="$year-$month-1";
 $time_end=("+1 month -1 day".date($time));
@@ -43,11 +42,11 @@ $month_day=date("j",strtotime($time_end));
 <body>
     <table class="calender">
     <tr><th colspan='7'>
-    <a href="calendar_index.php?Ym=<??>">上一月</a>
+    <a href="index.php?month=<?=$Mth-1;?>">上一月</a> 
     <span>
-        <?echo $year . "年" . $month . "月份"?>
+     <?php  echo $year . "年" . $month . "月份" ?>
     </span>
-    <a href="calendar_index.php?dm=<??>">下一月</a>
+    <a href="index.php?month=<?=$Mth+1;?>">下一月</a>
     </th></tr>
     <tr>
         <th class='hd'>日</th>
