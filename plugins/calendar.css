@@ -1,0 +1,20 @@
+.ftable{
+    text-align: center;
+    font-family: 'Microsoft JhengHei',Arial, Helvetica, sans-serif;
+    box-shadow: 0 0.5rem 1rem #f2fbfccf;
+    background-color: #f2fbfc;
+}
+table,td{
+    border:1px solid #ccc;
+    }
+.hd{
+    color: hotpink;
+}
+td,th,tr{
+    height: 10vh;
+    width: 10vw;
+}
+.always_center{
+    margin-top: 10vh;
+}
+

@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>萬年曆</title>
     <link rel="stylesheet" href="../plugins/bootstrap.css">
-    <link rel="stylesheet" href="/calendar_homework/calendar.CSS">
-</head>
-<!-- 變數區域 -->
+    <link rel="stylesheet" href="../plugins/calendar.css">
+
 <?php
 date_default_timezone_set("Asia/Taipei");
 if(isset($_GET['Ym'])){   
@@ -36,17 +35,19 @@ $week=date("w",strtotime($time));
 $month_day=date("j",strtotime($time_end));
 ?>
 
-<body>
+<body class="">
     
-    <div class="container shadow">
-    <div class="row">
-        <div class="col-5"><img class="img-fluid " src="../img/7385ba5b398d51d97b83837512c7bd71_s.jpg" alt=""></div>
-        <div class="col-7 push_all">
-            <table class="calender shadow">
-            <thead>
+    <div class="container always_center shadow">
+    <div class="row align-items-center table-active">
+        <div class="col-5"><img class="figure-img img-fluid" src="/img/smell-2.jpg" alt=""></div>
+        <div class="col-7">
+            <table class="ftable">
+
+            <!-- 下方不動 -->
+            <thead class="">
             <tr><th colspan='2'>
             <a href="calendar_index.php?Ym=<?=strtotime($today .'-1 month');?>">上一月</a></th><th colspan='3'>
-            <span>
+            <span class="h3">
                 <?php echo $year . "年" . $month . "月份"?>
             </span></th><th colspan='2'>
             <a href="calendar_index.php?Ym=<?=strtotime($today .'+1 month');?>">下一月</a>
@@ -61,7 +62,7 @@ $month_day=date("j",strtotime($time_end));
                 <th class='hd'>六</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody class="bg-white">
         <?php
         for($i=0;$i<6;$i++){
             echo "<tr>";
