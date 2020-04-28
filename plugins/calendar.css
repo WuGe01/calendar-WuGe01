@@ -13,8 +13,16 @@ table,td{
 td,th,tr{
     height: 10vh;
     width: 10vw;
+    position: relative;
 }
 .always_center{
     margin-top: 10vh;
 }
+.divholiday{
+    font-size: 4px !important;
+    position: absolute;
+    top:65%;
+    left: -50%;
+    transform: translateX(100%);
 
+}

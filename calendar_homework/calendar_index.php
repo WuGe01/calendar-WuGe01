@@ -18,15 +18,33 @@ if(isset($_GET['Ym'])){
     $year_temp=date("Y");
     $month_temp=date("m");  
 }
-// $year_tmp=$year;
-// $month_tmp=$month;
+
 $year=$year_temp;
 $month=$month_temp; 
 $today = $today_temp;
 
-// echo "年" . $year . "<br>" ;
-// echo "月" . $month . "<br>" ;
-// echo "今日" . $today;
+// 節日陣列放這裡
+$holiday = [
+    "1-1"=>"元旦",
+    "2-14"=>"情人節",
+    "2-28"=>"二二八",
+    "4-1"=>"愚人節",
+    "5-1"=>"勞動節",
+    "5-10"=>"母親節",
+    "6-21"=>"父親節",
+    "10-10"=>"國慶日",
+    "12-24"=>"平安夜",
+    "12-25"=>"聖誕節"
+];
+$mon=1;
+$kk=1;
+if (array_key_exists($mon .'-'.$kk, $holiday)) {
+
+    echo $holiday[$mon .'-'.$kk];
+}
+
+
+
 
 
 $time="$year-$month-1";
@@ -35,7 +53,7 @@ $week=date("w",strtotime($time));
 $month_day=date("j",strtotime($time_end));
 ?>
 
-<body class="">
+<body>
     
     <div class="container always_center shadow">
     <div class="row align-items-center table-active">
@@ -82,11 +100,15 @@ $month_day=date("j",strtotime($time_end));
                     }else if(($j+1)%7 == 1 or ($j+1)%7 == 0 ){
                         echo "<td class='hd'>";
                         echo $i*7+$j-$week+1;
+                        if(array_key_exists($month .'-'.($i*7+$j-$week+1),$holiday)){
+                            echo "<div class='divholiday hd'>" . $holiday['$month' .'-'.'($i*7+$j-$week+1)'] . "</div>";
+                        }
                         echo "</td>";
                     }
                     else{
                         echo "<td>";
                         echo $i*7+$j-$week+1;
+                        
                         echo "</td>";
                     }
                 }
