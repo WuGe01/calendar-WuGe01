@@ -23,6 +23,5 @@ td,th,tr{
     position: absolute;
     top:65%;
     left: -50%;
-    transform: translateX(100%);
-
+    transform: translateX(150%);
 }
