@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>萬年曆</title>
-    <link rel="stylesheet" href="../plugins/bootstrap.css">
-    <link rel="stylesheet" href="../plugins/calendar.css">
+    <link rel="stylesheet" href="./plugins/bootstrap.css">
+    <link rel="stylesheet" href="./plugins/calendar.css">
 
 <?php
 date_default_timezone_set("Asia/Taipei");
@@ -57,18 +57,18 @@ $month_day=date("j",strtotime($time_end));
     
     <div class="container always_center shadow">
     <div class="row align-items-center table-active">
-        <div class="col-5"><img class="figure-img img-fluid" src="/img/smell-2.jpg" alt=""></div>
+        <div class="col-5"><img class="figure-img img-fluid" src="./img/smell-2.jpg" alt=""></div>
         <div class="col-7">
             <table class="ftable">
 
             <!-- 下方不動 -->
             <thead class="">
             <tr><th colspan='2'>
-            <a href="calendar_index.php?Ym=<?=strtotime($today .'-1 month');?>">上一月</a></th><th colspan='3'>
+            <a href="index.php?Ym=<?=strtotime($today .'-1 month');?>">上一月</a></th><th colspan='3'>
             <span class="h3">
                 <?php echo $year . "年" . $month . "月份"?>
             </span></th><th colspan='2'>
-            <a href="calendar_index.php?Ym=<?=strtotime($today .'+1 month');?>">下一月</a>
+            <a href="index.php?Ym=<?=strtotime($today .'+1 month');?>">下一月</a>
             </th></tr>
             <tr>
                 <th class='hd'>日</th>

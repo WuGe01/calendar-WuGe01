@@ -20,8 +20,8 @@ td,th,tr{
 }
 .divholiday{
     font-size: 4px !important;
-    position: absolute;
+/*     position: absolute;
     top:65%;
     left: -50%;
-    transform: translateX(150%);
+    transform: translateX(150%); */
 }
