@@ -25,3 +25,10 @@ td,th,tr{
     left: -50%;
     transform: translateX(150%); */
 }
+
+@media screen and (max-width: 950px){
+    .img_switch{
+        display: none;
+        margin:auto;
+    }
+}

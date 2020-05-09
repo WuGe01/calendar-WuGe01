@@ -57,9 +57,9 @@ $month_day=date("j",strtotime($time_end));
     
     <div class="container always_center shadow">
     <div class="row align-items-center table-active">
-        <div class="col-5"><img class="figure-img img-fluid" src="./img/smell-2.jpg" alt=""></div>
-        <div class="col-7">
-            <table class="ftable">
+        <div class="col-5 img_switch"><img class="figure-img img-fluid" src="./img/smell-2.jpg" alt=""></div>
+        <div class="col">
+            <table class="ftable figure">
 
             <!-- 下方不動 -->
             <thead class="">
