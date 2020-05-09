@@ -1,11 +1,12 @@
 .ftable{
     text-align: center;
     font-family: 'Microsoft JhengHei',Arial, Helvetica, sans-serif;
-    box-shadow: 0 0.5rem 1rem #f2fbfccf;
+    /* box-shadow: 0 0.5rem 1rem #f2fbfccf; */
     background-color: #f2fbfc;
+    margin: auto;
 }
 table,td{
-    border:1px solid #ccc;
+    /* border:1px solid #ccc; */
     }
 .hd{
     color: hotpink;
@@ -30,5 +31,15 @@ td,th,tr{
     .img_switch{
         display: none;
         margin:auto;
+    }
+}
+.bg-my{
+    background-color: #f2fbfc;
+    padding: 1px 0px;
+}
+
+@media screen and (min-width: 1001px){
+    .bg-wv{
+        width: 1000px;
     }
 }

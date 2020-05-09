@@ -55,11 +55,13 @@ $month_day=date("j",strtotime($time_end));
 
 <body>
     
-    <div class="container always_center shadow">
-    <div class="row align-items-center table-active">
-        <div class="col-5 img_switch"><img class="figure-img img-fluid" src="./img/smell-2.jpg" alt=""></div>
-        <div class="col">
-            <table class="ftable figure">
+    <div class="container always_center">
+    <div class="row align-items-center bg-my p-0 bg-wv">
+        <div class="col-5 d-none d-md-block p-0 m-0">
+            <img class="figure-img img-fluid" src="./img/smell-2.jpg" alt="">
+        </div>
+        <div class="col p-0 m-0">
+            <table class="ftable m-auto">
 
             <!-- 下方不動 -->
             <thead class="">
